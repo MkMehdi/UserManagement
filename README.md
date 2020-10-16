@@ -4,4 +4,5 @@ User tasks sample project (Online/offline)
 
 + Navigate to User tasks
 
-Envi : Android studio 4.0, API 19, Kotlin, Navigation component,MVVM, Hilt, Coroutines, LiveData, Retrofit, Room
+Envi : Android studio 4.0, API 19, Kotlin, Navigation component, MVVM, Hilt, Coroutines, LiveData, Retrofit, Room
+
