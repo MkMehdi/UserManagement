@@ -10,7 +10,6 @@ import kotlinx.android.synthetic.main.task_custom.view.*
 
 import ma.sample.usertasks.R
 import ma.sample.usertasks.data.entity.Task
-import ma.sample.usertasks.data.entity.User
 
 /**
  * Created by Elmehdi Mellouk on 10/14/20.
@@ -42,7 +41,7 @@ class TasksAdapter : RecyclerView.Adapter<TasksAdapter.TasksViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return items.size ?: 0
+        return items.size
     }
 
     inner class TasksViewHolder(itemView: View?) :

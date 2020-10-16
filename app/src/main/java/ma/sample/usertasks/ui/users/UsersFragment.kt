@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.users_fragment.*
@@ -52,7 +54,6 @@ class UsersFragment : Fragment(),UsersAdapter.Listener {
 
     private fun setupObservers() {
         viewModel.users.observe(viewLifecycleOwner, Observer {
-
             when (it.status) {
                 Progress.Status.SUCCESS -> {
                     progressView.isRefreshing = false
@@ -67,7 +68,10 @@ class UsersFragment : Fragment(),UsersAdapter.Listener {
     }
 
     override fun onItemClick(user: User) {
-
+        findNavController().navigate(
+            R.id.action_usersFragment_to_tasksFragment,
+            bundleOf("id" to user.id)
+        )
     }
 
 }

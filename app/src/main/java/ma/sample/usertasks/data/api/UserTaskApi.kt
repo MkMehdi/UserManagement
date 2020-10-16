@@ -6,6 +6,7 @@ import ma.sample.usertasks.data.entity.User
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 
 /**
@@ -18,7 +19,7 @@ interface UserTaskApi {
     @GET("/users")
     suspend fun getUsers(): Response<List<User>>
 
-    @GET("/todos{userId}")
-    suspend fun getUserTasks(@Path("userId") userId: String): Response<List<Task>>
+    @GET("/todos")
+    suspend fun getUserTasks(@Query("userId") userId: String): Response<List<Task>>
 
 }

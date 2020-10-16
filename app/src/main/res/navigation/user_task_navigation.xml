@@ -7,13 +7,13 @@
     <fragment
         android:id="@+id/tasksFragment"
         android:name="ma.sample.usertasks.ui.tasks.TasksFragment"
-        android:label="tasks_fragment"
+        android:label="@string/title_tasks"
         tools:layout="@layout/tasks_fragment" />
     <fragment
         android:id="@+id/usersFragment"
         android:name="ma.sample.usertasks.ui.users.UsersFragment"
-        android:label="users_fragment"
-        tools:layout="@layout/users_fragment" >
+        android:label="@string/title_user"
+        tools:layout="@layout/users_fragment">
         <action
             android:id="@+id/action_usersFragment_to_tasksFragment"
             app:destination="@id/tasksFragment" />
